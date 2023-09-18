@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Research Survey</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+    <header>
+        <h1 id="title">Product Research Survey</h1>
+        <p id="description">Thank you for taking time to help us improve [Product].</p>
+    </header>
+    <form action="action.py" method="post" id="survey-form">
+        <label for="name" id="name-label">Name <input type="text" id="name" name="name" placeholder="Enter your name" required></label>
+        <label for="email" id="email-label">Email <input type="email" name="email" id="email" placeholder="Enter your Email " required></label>
+        <label for="number" id="number-label">Age <input type="number" name="age" id="number"
+        placeholder="Enter your age" min="13" max="100" required></label>
+        <label for="dropdown" id="gender-label">Gender 
+            <select name="gender" id="dropdown" required>
+                <option value="">Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="non-binary">Non-binary</option>
+                <option value="notToSay">Prefer Not To say</option>
+            </select>
+        </label>
+        <label for="yes">Would you recommend [Product] to a friend or colleague?
+            <label for="yes" class="inline"><input type="radio" name="recommendation" id="yes" value="Yes" requiredclass="inline"> Definitely</label>
+            <label for="mayBe" class="inline"><input type="radio" name="recommendation" id="mayBe" value="MayBe" class="inline"> May be</label>
+            <label for="no" class="inline"><input type="radio" name="recommendation" id="no" value="No" class="inline"> Not really</label>
+        </label>
+        <label for="quality">Which of the following mostly tempts you to buy [Product]?
+            <label for="quality" class="inline"><input type="checkbox" name="temptaion" id="quality" value="betterQuality" class="inline"> Better quality</label>
+            <label for="solveProblem" class="inline"><input type="checkbox" name="temptaion" id="solveProblem" value="solvesProblem" class="inline"> It solves a problem of mine</label>
+            <label for="reasonablePrice" class="inline"><input type="checkbox" name="temptaion" id="reasonablePrice" value="reasonablePrice" class="inline"> Its prices are reasonable</label>
+            <label for="other" class="inline"><input type="checkbox" name="temptaion" id="other" value="other" class="inline"> Other</label>
+        </label>
+        <label for="suggestion">In Your opinion, what kind of improvement would make [Product] better?
+            <textarea name="suggestion" id="suggestion" cols="30" rows="10" placeholder="Enter your suggestions here..." required></textarea>
+        </label>
+        <input type="submit" value="Submit" id="submit">
+    </form>
 </body>
+
 </html>
